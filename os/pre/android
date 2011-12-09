@@ -1,2 +1,2 @@
-kernel=uImage.usbnet
+kernel=uImage.android
 

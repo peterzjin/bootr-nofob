@@ -37,11 +37,11 @@
 +    # May need to say "don't update mtab" option below
 +    mount -t vfat -o rw /dev/mapper/store-media /realroot
 +
-+    # mount boot.ext3 from 'usb partition'/android
-+    mount -o loop /realroot/android/boot.ext3 /realroot/android/mix
++    # mount preplus.img from 'usb partition'/_android_img
++    mount -o loop /realroot/_android_img/preplus.img /realroot/_android_img/android_root
 +
-+    /sbin/pivot_root /realroot/android/mix /realroot/android/mix/boot
-+    mount --move /boot/realroot /mnt/sdcard
++    /sbin/pivot_root /realroot/_android_img/android_root /realroot/_android_img/android_root/boot
++    #mount --move /boot/realroot /mnt/sdcard
 +fi
 +
  # Recommended:
